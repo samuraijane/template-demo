@@ -1,0 +1,11 @@
+.y-sticky {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.y-wrap {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
+}
