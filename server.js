@@ -31,6 +31,14 @@ server.get('/', (req, res) => {
   });
 })
 
+server.get('/friends', (req, res) => {
+  res.render('friends', {
+    locals: {
+      friends: ['Anna', 'Billy', 'Carlos', 'David', 'Eunice']
+    }
+  })
+})
+
 const { PORT } = process.env;
 
 server.listen(PORT, () => {
