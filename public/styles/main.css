@@ -11,24 +11,20 @@
 }
 
 .gallery {
-  background-color: coral;
   display: flex;
   flex-direction: column;
   margin: 50px 0;
 }
 
 .gallery__image {
+  max-height: 260px;
   min-height: 260px;
   margin: 10px auto;
+  overflow: hidden;
   width: 80%;
 }
 
-.gallery__image--primary {
-  background-color: cornsilk;
-}
-
 .gallery__image--secondary {
-  background-color: cornflowerblue;
   width: 80%;
 }
 
@@ -65,10 +61,25 @@
   .gallery__image--primary {
     flex: 1 1 auto;
     margin-right: 8px;
+    max-height: 528px;
     width: 40%;
   }
 
   .gallery__image--secondary {
     width: 49%; /* at 49%, there is a natural gap in between two boxes that equals 8px */
+  }
+
+  .gallery__image img {
+    height: auto;
+    width: 100%;
+  }
+
+  .gallery__image--fill-vertical img {
+    height: 100%;
+    width: auto;
+  }
+
+  .gallery__image--shift-left img {
+    margin-left: -100px;
   }
 }
